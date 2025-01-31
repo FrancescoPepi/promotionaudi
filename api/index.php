@@ -76,7 +76,15 @@ $basePath = dirname($_SERVER['SCRIPT_NAME']);
 
         <div class="absolute bottom-80 w-full z-10 text-2xl text-center text-white">Prenota un test drive</div>
         <div id="nav-bar-container" class="sticky top-0 right-0 left-0 flex items-center transition-all z-50">
-            <?php include __DIR__ . '/component/nav.html'; ?>
+            <nav id="subnav" class="subnav__switch">
+                <div class="subnav__switch-indicator"></div>
+                <ul class="subnav__switch-list">
+                    <li><a href="#header-hero">Modelli</a></li>
+                    <li><a href="#design">Design intelligente</a></li>
+                    <li><a href="#statistics">Affidabilità</a></li>
+                    <!-- <li><a href="#discovery-tools">SEO e analisi</a></li> -->
+                </ul>
+            </nav>
         </div>
 
         <div class="absolute bottom-0 w-full h-full z-10 test">
