@@ -30,8 +30,8 @@ echo "<script>console.log('Base Path: " . $basePath . "');</script>";
             <!-- Carousel wrapper -->
             <div class="top-0 bottom-0 left-0 right-0 h-full overflow-hidden absolute">
                 <?php
-                $json_url = __DIR__ . '/json/carousel.json';
-                echo "<script>console.log('Base Path: " . __DIR__ . "');</script>";
+                $json_url = '/json/carousel.json';
+                echo "<script>console.log('Base Path: " . "');</script>";
                 $json = file_get_contents($json_url);
                 $source = json_decode($json, true);
                 ?>
@@ -141,7 +141,7 @@ echo "<script>console.log('Base Path: " . $basePath . "');</script>";
         <div
             class="w-[70%] mx-auto grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
             <?php
-            $json_url = __DIR__ . '/json/testimonial.json';
+            $json_url = '/json/testimonial.json';
             $json = file_get_contents($json_url);
             $source = json_decode($json, true);
             ?>
