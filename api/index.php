@@ -30,7 +30,7 @@ echo "<script>console.log('Base Path: " . $basePath . "');</script>";
             <!-- Carousel wrapper -->
             <div class="top-0 bottom-0 left-0 right-0 h-full overflow-hidden absolute">
                 <?php
-                $json_url = __DIR__ . '/../json/carousel.json';
+                $json_url = __DIR__ . '/json/carousel.json';
                 echo "<script>console.log('Base Path: " . __DIR__ . "');</script>";
                 $json = file_get_contents($json_url);
                 $source = json_decode($json, true);
@@ -141,7 +141,7 @@ echo "<script>console.log('Base Path: " . $basePath . "');</script>";
         <div
             class="w-[70%] mx-auto grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
             <?php
-            $json_url = __DIR__ . '/../json/testimonial.json';
+            $json_url = __DIR__ . '/json/testimonial.json';
             $json = file_get_contents($json_url);
             $source = json_decode($json, true);
             ?>
@@ -172,7 +172,7 @@ echo "<script>console.log('Base Path: " . $basePath . "');</script>";
     </section>
     <div class="fixed bottom-0 right-0 z-50 p-1 my-5 bg-green-300/70 rounded-l-full cursor-pointer">
         <div class="pr-3 m-3 hover:pr-50 group transition-all duration-700 ease-in-out flex items-center relative">
-            <img src="/img/whatsapp-128.png'" alt="" class="size-12">
+            <img src="/img/whatsapp-128.png" alt="" class="size-12">
             <span
                 class="text-2xl text-white ml-2 opacity-0 group-hover:right-0 group-hover:opacity-100 absolute right-[-100%] transition-all duration-500 ease-in-out whitespace-nowrap">
                 Whatsapp
