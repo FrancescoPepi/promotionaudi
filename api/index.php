@@ -23,7 +23,7 @@
             <!-- Carousel wrapper -->
             <div class="top-0 bottom-0 left-0 right-0 h-full overflow-hidden absolute">
                 <?php
-                $json_url = 'api/carousel.json';
+                $json_url = __DIR__ . '/carousel.json';
                 $json = file_get_contents($json_url);
                 $source = json_decode($json, true);
                 ?>
