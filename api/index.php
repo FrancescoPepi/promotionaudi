@@ -1,3 +1,6 @@
+<?php
+$basePath = dirname($_SERVER['SCRIPT_NAME']);
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,10 +32,9 @@
                 ?>
                 <?php foreach($source['data'] as $key=>$value): ?>
                 <div class="hidden duration-700 ease-in-out" data-carousel-item>
-                    <img src="img/<?php echo $value['path']; ?>"
+                    <img src="<?php echo $basePath . '/img/' . $value['path']; ?>"
                         class="absolute block w-full h-full object-cover -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
                         alt="<?php echo $value['path']; ?>">
-                    <!-- <h2 class=" text-7xl font-bold absolute top-5 right-5"><?php echo $value['title']; ?></h2> -->
                 </div>
                 <?php endforeach; ?>
             </div>
@@ -52,11 +54,7 @@
                 <div id="default-carousel" class="h-full w-full" data-carousel="slide">
                     <!-- Carousel wrapper -->
                     <div class="h-full overflow-hidden relative">
-                        <?php
-                        $json_url = 'carousel.json';
-                        $json = file_get_contents($json_url);
-                        $source = json_decode($json, true);
-                        ?>
+
                         <?php foreach($source['data'] as $key=>$value): ?>
                         <div class="hidden duration-700 ease-in-out absolute bg-gray-800/40 backdrop-blur-xs text-[rgb(222_222_222)] p-10 rounded-[40px]"
                             data-carousel-item>
@@ -76,14 +74,14 @@
 
         <div class="absolute bottom-80 w-full z-10 text-2xl text-center text-white">Prenota un test drive</div>
         <div id="nav-bar-container" class="sticky top-0 right-0 left-0 flex items-center transition-all z-50">
-            <?php include 'component/nav.html'; ?>
+            <?php include __DIR__ . '/component/nav.html'; ?>
         </div>
 
         <div class="absolute bottom-0 w-full h-full z-10 test">
         </div>
     </section>
     <section id="design" class="bg-black relative p-5">
-        <?php include 'component/mainBody.html'; ?>
+        <?php include __DIR__ . '/component/mainBody.html'; ?>
     </section>
     <section id="statistics" class="h-dvh w-full bg-black relative p-5">
         <!-- STATISTICHE -->
@@ -130,7 +128,7 @@
         <div
             class="w-[70%] mx-auto grid mb-8 border border-gray-200 rounded-lg shadow-xs dark:border-gray-700 md:mb-12 md:grid-cols-2 bg-white dark:bg-gray-800">
             <?php
-            $json_url = 'testimonial.json';
+            $json_url = __DIR__ . '/testimonial.json';
             $json = file_get_contents($json_url);
             $source = json_decode($json, true);
             ?>
@@ -161,7 +159,7 @@
     </section>
     <div class="fixed bottom-0 right-0 z-50 p-1 my-5 bg-green-300/70 rounded-l-full cursor-pointer">
         <div class="pr-3 m-3 hover:pr-50 group transition-all duration-700 ease-in-out flex items-center relative">
-            <img src="img/whatsapp-128.png" alt="" class="size-12">
+            <img src="<?php echo $basePath . '/img/whatsapp-128.png'; ?> " alt="" class="size-12">
             <span
                 class="text-2xl text-white ml-2 opacity-0 group-hover:right-0 group-hover:opacity-100 absolute right-[-100%] transition-all duration-500 ease-in-out whitespace-nowrap">
                 Whatsapp
