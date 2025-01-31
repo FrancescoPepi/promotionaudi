@@ -1,5 +1,5 @@
 <?php
-$basePath = dirname($_SERVER['SCRIPT_NAME']);
+$basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 
 echo "<script>console.log('Base Path: " . $basePath . "');</script>";
 echo var_dump($basePath);
