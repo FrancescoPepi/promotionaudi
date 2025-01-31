@@ -1,5 +1,5 @@
-@import "./cssComponent/nav.css";
-@import "./cssComponent/mainBody.css";
+/* @import "./cssComponent/nav.css";
+@import "./cssComponent/mainBody.css"; */
 html {
     scroll-behavior: smooth;
 }

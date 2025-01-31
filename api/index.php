@@ -11,9 +11,11 @@ $basePath = dirname($_SERVER['SCRIPT_NAME']);
     <script src="https://unpkg.com/@tailwindcss/browser@4" defer></script>
 
 
-    <script type="text/javascript" src="main.js" defer></script>
-    <script type="text/javascript" src="jsComponent/nav.js" defer></script>
-    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="<?php echo $basePath; ?>/main.js" defer></script>
+    <script type="text/javascript" src="<?php echo $basePath; ?>/jsComponent/nav.js" defer></script>
+    <link rel="stylesheet" href="<?php echo $basePath; ?>/style.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>/cssComponent/nav.css">
+    <link rel="stylesheet" href="<?php echo $basePath; ?>/cssComponent/mainBody.css">
     <title>Sesto Autoveicoli</title>
     <link rel="icon" type="image/x-icon"
         href="https://cdnwp.dealerk.com/920e35d2/uploads/sites/4/2021/07/logo-sede-carrozzeria-0x60.png">
