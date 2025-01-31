@@ -1,5 +1,5 @@
 <?php
-$basePath = rtrim(dirname($_SERVER['SCRIPT_NAME']), '/');
+$basePath = ltrim(dirname($_SERVER['SCRIPT_NAME']), '/');
 
 echo "<script>console.log('Base Path: " . $basePath . "');</script>";
 echo var_dump($basePath);
@@ -32,6 +32,7 @@ echo var_dump($basePath);
             <div class="top-0 bottom-0 left-0 right-0 h-full overflow-hidden absolute">
                 <?php
                 $json_url = __DIR__ . '/carousel.json';
+                echo "<script>console.log('Base Path: " . __DIR__ . "');</script>";
                 $json = file_get_contents($json_url);
                 $source = json_decode($json, true);
                 ?>
